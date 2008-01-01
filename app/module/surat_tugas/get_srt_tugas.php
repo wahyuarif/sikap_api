@@ -10,7 +10,7 @@ if(!$_SESSION){
 } else {
     include "../../../bin/koneksi.php";
 
-    $sql	= "SELECT no_pengajuan, nm_dosen, nim, nm_mhs, prodi, status FROM view_pengajuan GROUP BY nim";
+    $sql	= "SELECT no_pengajuan, nm_dosen, nm_dosen2, nim, nm_mhs, prodi, status FROM view_pengajuan GROUP BY nim";
 
     $hasil	= $konek->query($sql);
 
@@ -23,6 +23,8 @@ if(!$_SESSION){
         $r['no_pengajuan']  = $row['no_pengajuan'];
 
         $r['nm_dosen']      = $row['nm_dosen'];
+
+        $r['nm_dosen2']      = $row['nm_dosen2'];
 
         $r['nim']           = $row['nim'];
 

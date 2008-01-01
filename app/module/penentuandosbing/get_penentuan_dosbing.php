@@ -10,7 +10,7 @@ if(!$_SESSION){
 } else {
     include "../../../bin/koneksi.php";
 
-    $sql	= "SELECT no_pengajuan, judul, nm_instansi, nm_dosen, nim, nm_mhs, status FROM view_pengajuan";
+    $sql	= "SELECT no_pengajuan, judul, nm_instansi, nm_dosen, nm_dosen2, nim, nm_mhs, status FROM view_pengajuan";
 
     $hasil	= $konek->query($sql);
 
@@ -27,6 +27,8 @@ if(!$_SESSION){
         $r['nm_instansi']   = $row['nm_instansi'];
 
         $r['nm_dosen']      = $row['nm_dosen'];
+
+        $r['nm_dosen2']      = $row['nm_dosen2'];
 
         $r['nim']            = $row['nim'];
 
